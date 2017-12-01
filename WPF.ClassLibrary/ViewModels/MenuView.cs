@@ -1,32 +1,24 @@
-﻿using System.Collections.Generic;
-using WPF.ClassLibrary.Models;
-
-namespace WPF.ClassLibrary.ViewModels
+﻿namespace WPF.ClassLibrary.ViewModels
 {
+    using System.Collections.Generic;
+    using WPF.ClassLibrary.Models;
     public class MenuView
     {
         List<MenuModel> list = new List<MenuModel>();
 
-        public List<MenuModel> MenuAdd() {
-            list.Add(new MenuModel() {
-                NameMenu = "",
-                CategoryMenu=""            
-            });
-            return list;
-        }
-        public List<MenuModel> MenuAdd(MenuModel menu)
+        public List<MenuModel> MenuAdd(MenuModel ItemMenu)
         {
             list.Add(new MenuModel()
             {
-                NameMenu = menu.NameMenu,
-                CategoryMenu = menu.CategoryMenu
+                NameMenu = ItemMenu.NameMenu,
+                CategoryMenu = ItemMenu.CategoryMenu
             });
             return list;
         }
-        public bool MenuClear(List<MenuModel> menu)
+        public List<MenuModel> MenuClear(List<MenuModel> ListMenu)
         {
-            menu.Clear();
-            return true;
+            ListMenu.Clear();
+            return ListMenu;
         }
     }
 }
