@@ -18,8 +18,8 @@
 
     <Grid>
 
-        <StackPanel Height="115" Width="300" Margin="108.5,0" VerticalAlignment="Top"  >
-            <Grid>
+        <StackPanel x:Name="LoginLayer" Height="115" Width="300" Margin="108.5,0" VerticalAlignment="Top"  >
+            <Grid  >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -34,16 +34,17 @@
                        Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
                 <Label Grid.Row="1" Grid.Column="0" Content="Usuario:"/>
                 <Label Grid.Row="2" Grid.Column="0" Content="Password:"/>
-                <TextBox Grid.Column="1" Grid.Row="1" Margin="3" />
-                <TextBox Grid.Column="1" Grid.Row="2" Margin="3" />
-                <Button Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" 
-                        MinWidth="80" Margin="3" Content="Start"  />
+                <TextBox Name="TxtUser" Grid.Column="1" Grid.Row="1" Margin="3" />
+                <TextBox Name="TxtPassword" Grid.Column="1" Grid.Row="2" Margin="3" />
+                <Button Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left"
+                        MinWidth="80" Margin="3" Content="Start" Click="StartAuthentication_Click"/>
                 <Button Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right"
                         MinWidth="80" Margin="3" Content="Cancel"  />
 
             </Grid>
         </StackPanel>
-        <StackPanel VerticalAlignment="Bottom">
+        
+            <StackPanel VerticalAlignment="Bottom">
             <Border  Height="30" BorderBrush="Black" BorderThickness="0,0,0,1" VerticalAlignment="Bottom" HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <TextBlock Text="Theme: " Margin="5,0,0,0"   />

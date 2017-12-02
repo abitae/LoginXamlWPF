@@ -12,7 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF.ClassLibrary.Models;
 using WPF.Themes;
+using WPF.Main.Main;
 
 namespace LoginXamlWPF
 {
@@ -42,6 +44,19 @@ namespace LoginXamlWPF
                 // Application Level
                 // Application.Current.ApplyTheme(theme);
             }
+        }
+
+        private void StartAuthentication_Click(object sender, RoutedEventArgs e)
+        {
+            UserModel user = new UserModel();
+            user.NameUser = TxtUser.Text;
+            user.Password = TxtPassword.Text;
+            LoginLayer.Visibility = Authentication.Authenticate(user) ? Visibility.Visible : Visibility.Collapsed;
+            //var win = new MainBusiness();
+            //win.Show();
+           
+            
+
         }
     }
 }

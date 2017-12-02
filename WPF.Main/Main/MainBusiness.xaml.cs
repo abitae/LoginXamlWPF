@@ -32,10 +32,10 @@ namespace WPF.Main.Main
                 string theme = e.AddedItems[0].ToString();
 
                 // Window Level
-               this.ApplyTheme(theme);
+                //this.ApplyTheme(theme);
 
                 // Application Level
-                // Application.Current.ApplyTheme(theme);
+                Application.Current.ApplyTheme(theme);
             }
         }
     }

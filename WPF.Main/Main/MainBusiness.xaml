@@ -48,23 +48,15 @@
                 <ColumnDefinition Width="200" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-        
 
-       
-            <StackPanel Orientation="Vertical" Grid.Column="0">
-                <Button Content="Button" Height="23" Name="button1" VerticalAlignment="Top" />
-            </StackPanel>
-            <StackPanel Grid.Column="1">
+            <Frame Grid.Column="0"  Content="Frame" Source="/WPF.Main;component/Main/Page1.xaml">
+                
+            </Frame>
 
-                <TabControl Height="211" HorizontalAlignment="Left" Name="tabControl1" VerticalAlignment="Top" Width="491">
-                    <TabItem Header="tabItem1" Name="tabItem1">
-                        <Grid />
-                    </TabItem>
-                </TabControl>
-               
-
-            </StackPanel>
-
+            <Frame Grid.Column="1" Content="Frame" Source="/WPF.Main;component/Main/Page2.xaml">
+                
+            </Frame>
+            
         </Grid>
     </DockPanel>
     

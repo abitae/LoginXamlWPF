@@ -99,6 +99,14 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\WPF.ClassLibrary\WPF.ClassLibrary.csproj">
+      <Project>{7b49846f-f983-47b2-92a9-b875862ae080}</Project>
+      <Name>WPF.ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WPF.Main\WPF.Main.csproj">
+      <Project>{a4e8f685-930d-4a04-ac6f-10fe4dc82528}</Project>
+      <Name>WPF.Main</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\abel\Downloads\wpfthemes-81799\WPF.Themes\WPF.Themes.csproj">
       <Project>{cd3cd636-d63e-4bd5-9fe9-2b63da6f0616}</Project>
       <Name>WPF.Themes</Name>
